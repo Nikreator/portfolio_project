@@ -1,0 +1,51 @@
+.price {
+    padding-top: 120px;
+    .title {
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &__wrapper {
+        display: grid;
+        padding: 0 50px;
+        margin-top: 60px;
+        grid-template-columns: repeat(2, 366px);
+        grid-template-rows: repeat(4, 45px);
+        column-gap: 306px;
+        row-gap: 15px;
+    }
+    &__title {
+        position: relative;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 21px;
+        @include before_circle;
+        &:before {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 3px;
+            left: -25px;
+
+        }
+        span {
+            display: flex;
+            justify-content: flex-end;
+            align-items: end;
+            margin-top: -22px;
+        }
+    }
+    &__descr {
+        width: 100%;
+        margin-top: 5px;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
